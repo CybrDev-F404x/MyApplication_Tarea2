@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Nombre del usuario -->
+    <EditText
+        android:id="@+id/editTextNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingresa tu nombre"
+        android:inputType="textPersonName"/>
+
+    <!-- Saludo -->
+    <TextView
+        android:id="@+id/textViewSaludo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hola, Usuario"
+        android:textSize="20sp"
+        android:padding="8dp"
+        android:textStyle="bold"/>
+
+    <!-- Entrada y resultado -->
+    <TextView
+        android:id="@+id/textViewEntrada"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:padding="12dp"/>
+
+    <!-- Teclado numerico -->
+    <GridLayout
+        android:id="@+id/gridTeclado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="4"
+        android:layout_marginTop="16dp">
+
+        <!-- Botones 1-9 -->
+        <Button android:id="@+id/btn1" android:text="1"/>
+        <Button android:id="@+id/btn2" android:text="2"/>
+        <Button android:id="@+id/btn3" android:text="3"/>
+        <Button android:id="@+id/btn4" android:text="4"/>
+        <Button android:id="@+id/btn5" android:text="5"/>
+        <Button android:id="@+id/btn6" android:text="6"/>
+        <Button android:id="@+id/btn7" android:text="7"/>
+        <Button android:id="@+id/btn8" android:text="8"/>
+        <Button android:id="@+id/btn9" android:text="9"/>
+        <!-- Cero -->
+        <Button android:id="@+id/btn0" android:text="0"/>
+        <!-- Boton Reiniciar -->
+        <Button android:id="@+id/btnReiniciar" android:text="Reiniciar"/>
+    </GridLayout>
+
+    <!-- Botones de conversion -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/btnLongitud"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Metros ↔ Pies"
+            android:enabled="false"/>
+
+        <Button
+            android:id="@+id/btnPeso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kg ↔ Lb"
+            android:enabled="false"/>
+
+        <Button
+            android:id="@+id/btnTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="°C ↔ °F"
+            android:enabled="false"/>
+    </LinearLayout>
+</LinearLayout>
